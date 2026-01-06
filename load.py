@@ -150,13 +150,13 @@ def plugin_prefs(parent, cmdr, is_beta):
     bmp_label = nb.Label(frame, text="Screenshot Directory")
     bmp_label.grid(padx=10, row=0, column=0, sticky=tk.W)
 
-    bmp_entry = nb.Entry(frame, textvariable=this.bmp_loc)
+    bmp_entry = nb.EntryMenu(frame, textvariable=this.bmp_loc)
     bmp_entry.grid(padx=10, row=0, column=1, columnspan=2, sticky=tk.W)
 
     png_label = nb.Label(frame, text="Conversion Directory")
     png_label.grid(padx=10, row=1, column=0, sticky=tk.W)
 
-    png_entry = nb.Entry(frame, textvariable=this.png_loc)
+    png_entry = nb.EntryMenu(frame, textvariable=this.png_loc)
     png_entry.grid(padx=10, row=1, column=1, columnspan=2, sticky=tk.W)
 
     nb.Checkbutton(frame, text="Delete Original File", variable=this.delete_org).grid(
